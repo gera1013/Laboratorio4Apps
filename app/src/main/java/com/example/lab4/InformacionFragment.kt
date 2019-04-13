@@ -1,6 +1,5 @@
 package com.example.lab4
 
-import android.content.Intent
 import android.databinding.DataBindingUtil.inflate
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -15,8 +14,8 @@ class InformacionFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
 
-        var binding : FragmentInformacionBinding = inflate(inflater, R.layout.fragment_informacion,container,false)
-        var args = InformacionFragmentArgs.fromBundle(arguments!!)
+        val binding : FragmentInformacionBinding = inflate(inflater, R.layout.fragment_informacion,container,false)
+        val args = InformacionFragmentArgs.fromBundle(arguments!!)
 
         binding.myInfo = myInfo
 

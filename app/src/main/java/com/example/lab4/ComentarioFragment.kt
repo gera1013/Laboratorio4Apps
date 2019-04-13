@@ -12,12 +12,20 @@ import com.example.lab4.databinding.FragmentComentarioBinding
 
 class ComentarioFragment : Fragment() {
 
+    private val myComment : MyComment = MyComment()
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
 
         val binding : FragmentComentarioBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_comentario, container, false)
+        val args = ComentarioFragmentArgs.fromBundle(arguments!!)
+
+        binding.myComment = myComment
+
+        myComment.comment = args.comentario
+
         binding.nextMatchButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_comentarioFragment_to_informacionFragment)
+            it.findNavController().navigate(ComentarioFragmentDirections.actionComentarioFragmentToInformacionFragment(0))
         }
         return binding.root
     }
@@ -31,7 +39,7 @@ class ComentarioFragment : Fragment() {
     }
 
     private fun getShareIntent(): Intent {
-        var args = ComentarioFragmentArgs.fromBundle(arguments!!)
+        val args = ComentarioFragmentArgs.fromBundle(arguments!!)
         return ShareCompat.IntentBuilder.from(activity).setText(args.comentario).setType("text/plain").intent
     }
 
