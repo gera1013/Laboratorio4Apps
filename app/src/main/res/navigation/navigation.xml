@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation"
+            app:startDestination="@id/inicioFragment">
+
+    <fragment
+            android:id="@+id/inicioFragment"
+            android:name="com.example.lab4.InicioFragment"
+            android:label="fragment_inicio"
+            tools:layout="@layout/fragment_inicio">
+        <action
+                android:id="@+id/action_inicioFragment_to_informacionFragment"
+                app:destination="@id/informacionFragment"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/informacionFragment"
+            android:name="com.example.lab4.InformacionFragment"
+            android:label="InformacionFragment"
+            tools:layout="@layout/fragment_informacion">
+        <action android:id="@+id/action_informacionFragment_to_comentarioFragment"
+                app:destination="@id/comentarioFragment" app:popUpTo="@+id/informacionFragment"
+                app:popUpToInclusive="true"/>
+        <argument android:name="Lugar" app:argType="integer"/>
+    </fragment>
+    <fragment android:id="@+id/aboutFragment" android:name="com.example.lab4.AboutFragment"
+              android:label="@string/title_about_trivia" tools:layout="@layout/fragment_about"/>
+    <fragment android:id="@+id/comentarioFragment" android:name="com.example.lab4.ComentarioFragment"
+              android:label="fragment_comentario" tools:layout="@layout/fragment_comentario">
+        <action android:id="@+id/action_comentarioFragment_to_informacionFragment"
+                app:destination="@id/informacionFragment" app:popUpTo="@+id/inicioFragment"
+        />
+        <argument android:name="Comentario" app:argType="string"/>
+    </fragment>
+</navigation>
