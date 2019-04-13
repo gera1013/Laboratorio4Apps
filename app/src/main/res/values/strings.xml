@@ -105,4 +105,5 @@
     <string name="about">About</string>
     <string name="share">Share</string>
     <string name="share_text">Este fue mi comentario</string>
+    <string name="NavDrawerDescription">Imagen de encabezado para el Nav Drawer</string>
 </resources>
