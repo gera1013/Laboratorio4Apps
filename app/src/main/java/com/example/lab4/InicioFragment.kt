@@ -22,10 +22,10 @@ class InicioFragment : Fragment() {
 
         }
         binding.button2.setOnClickListener {
-            it.findNavController().navigate(InicioFragmentDirections.ActionInicioFragmentToInformacionFragment(2))
+            it.findNavController().navigate(InicioFragmentDirections.actionInicioFragmentToInformacionFragment(2))
         }
         binding.button3.setOnClickListener {
-            it.findNavController().navigate(InicioFragmentDirections.ActionInicioFragmentToInformacionFragment(3))
+            it.findNavController().navigate(InicioFragmentDirections.actionInicioFragmentToInformacionFragment(3))
         }
 
         binding.starButton.setOnClickListener{
