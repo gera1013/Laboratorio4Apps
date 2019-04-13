@@ -5,14 +5,14 @@
     <data>
         <variable name="myInfo" type="com.example.lab4.MyInfo"/>
     </data>
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".InformacionFragment">
         <TextView
                 style="@style/TitleStyle"
                 android:id="@+id/article_heading"
-                android:text="@={myInfo.title}"
+                android:text="@string/info_title1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
@@ -30,7 +30,7 @@
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" android:layout_height="match_parent">
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -38,14 +38,14 @@
                 <TextView
                         style="@style/SubtitleStyle"
                         android:id="@+id/article_subheading"
-                        android:text="@={myInfo.subtitle}"
+                        android:text="@string/article_subtitle1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBaseline_toBaselineOf="@+id/article"/>
 
                 <TextView
                         style="@style/TextStyle"
                         android:id="@+id/article"
-                        android:text="@={myInfo.text}"
+                        android:text="@string/info_text1"
                         android:autoLink="web"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/article_subheading"
@@ -73,10 +73,10 @@
                         app:layout_constraintTop_toBottomOf="@+id/article" android:layout_marginTop="20dp"
                         android:hint="@string/comment_add"/>
 
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </ScrollView>
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

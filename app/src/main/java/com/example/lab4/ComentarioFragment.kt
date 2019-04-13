@@ -2,13 +2,14 @@ package com.example.lab4
 
 
 import android.content.Intent
-import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.ShareCompat
+import androidx.fragment.app.Fragment
+import androidx.core.app.ShareCompat
 import android.view.*
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.lab4.databinding.FragmentComentarioBinding
+
 
 class ComentarioFragment : Fragment() {
 
