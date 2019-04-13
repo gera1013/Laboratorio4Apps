@@ -3,7 +3,7 @@ package com.example.lab4
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.*
-import androidx.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil.inflate
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.lab4.databinding.FragmentInicioBinding
@@ -15,7 +15,7 @@ class InicioFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
 
-        val binding : FragmentInicioBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_inicio, container, false)
+        val binding : FragmentInicioBinding = inflate(inflater, R.layout.fragment_inicio, container, false)
 
         binding.button1.setOnClickListener {
             it.findNavController().navigate(InicioFragmentDirections.actionInicioFragmentToInformacionFragment(1))

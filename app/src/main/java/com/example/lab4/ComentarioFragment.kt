@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.core.app.ShareCompat
 import android.view.*
-import androidx.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil.inflate
 import androidx.navigation.findNavController
 import com.example.lab4.databinding.FragmentComentarioBinding
 
@@ -18,7 +18,7 @@ class ComentarioFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
 
-        val binding : FragmentComentarioBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_comentario, container, false)
+        val binding : FragmentComentarioBinding = inflate(inflater, R.layout.fragment_comentario, container, false)
         val args = ComentarioFragmentArgs.fromBundle(arguments!!)
 
         binding.myComment = myComment
