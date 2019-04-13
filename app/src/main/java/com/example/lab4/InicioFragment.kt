@@ -10,7 +10,7 @@ import com.example.lab4.databinding.FragmentInicioBinding
 
 class InicioFragment : Fragment() {
 
-    private var mostrar = true
+    //private var mostrar = true
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
@@ -29,15 +29,15 @@ class InicioFragment : Fragment() {
         }
 
         binding.starButton.setOnClickListener{
-            if(mostrar){
+            //if(mostrar){
                 binding.textIngresado.visibility = View.VISIBLE
                 binding.editText.visibility = View.GONE
                 binding.textView.visibility = View.GONE
-            } else{
+            //} else{
                 binding.textIngresado.visibility = View.GONE
                 binding.editText.visibility = View.VISIBLE
                 binding.textView.visibility = View.VISIBLE
-            }
+            //}
         }
 
         setHasOptionsMenu(true)
