@@ -17,8 +17,6 @@ class InformacionFragment : Fragment() {
         val binding : FragmentInformacionBinding = inflate(inflater, R.layout.fragment_informacion,container,false)
         val args = InformacionFragmentArgs.fromBundle(arguments!!)
 
-        binding.myInfo = myInfo
-
         if(args.lugar == 1){
             binding.apply {
                 myInfo?.title = R.string.info_title1.toString()
@@ -44,6 +42,8 @@ class InformacionFragment : Fragment() {
         binding.addComentario.setOnClickListener {
             it.findNavController().navigate(InformacionFragmentDirections.actionInformacionFragmentToComentarioFragment(binding.comentario.text.toString()))
         }
+
+        binding.myInfo = myInfo
 
         setHasOptionsMenu(true)
         return binding.root

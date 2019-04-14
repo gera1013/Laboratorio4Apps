@@ -21,9 +21,9 @@ class ComentarioFragment : Fragment() {
         val binding : FragmentComentarioBinding = inflate(inflater, R.layout.fragment_comentario, container, false)
         val args = ComentarioFragmentArgs.fromBundle(arguments!!)
 
-        binding.myComment = myComment
-
         myComment.comment = args.comentario
+
+        binding.myComment = myComment
 
         binding.nextMatchButton.setOnClickListener {
             it.findNavController().navigate(ComentarioFragmentDirections.actionComentarioFragmentToInformacionFragment(0))

@@ -12,7 +12,7 @@
         <TextView
                 style="@style/TitleStyle"
                 android:id="@+id/article_heading"
-                android:text="@string/info_title1"
+                android:text="@{myInfo}"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
@@ -38,14 +38,14 @@
                 <TextView
                         style="@style/SubtitleStyle"
                         android:id="@+id/article_subheading"
-                        android:text="@string/article_subtitle1"
+                        android:text="@{myInfo.subtitle}"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBaseline_toBaselineOf="@+id/article"/>
 
                 <TextView
                         style="@style/TextStyle"
                         android:id="@+id/article"
-                        android:text="@string/info_text1"
+                        android:text="@{myInfo.text}"
                         android:autoLink="web"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/article_subheading"
